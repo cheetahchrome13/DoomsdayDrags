@@ -28,7 +28,7 @@ body {
   display: block;
   width: 100%;
 }
-.nuked {
+#nuke {
   position: absolute;
   top: 7em;
   left: 107em;
@@ -38,24 +38,24 @@ body {
   border-top: ridge lime .3em;
   border-bottom: ridge lime .3em;
 }
-.greasy {
+#greasy {
   position: absolute;
   top: 44em;
 }
-.scooter {
+#scooter {
   position: absolute;
   top: 54.5em;
 }
-.skull {
+#skully {
   position: absolute;
   top: 25em;
 }
-.win {
+#winner {
   position: absolute;
   top: 40em;
   left: 187em;
 }
-.scorebox {
+#score {
   position: absolute;
   left: 78.5em;
 }
