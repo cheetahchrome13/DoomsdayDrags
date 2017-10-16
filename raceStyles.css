@@ -1,0 +1,195 @@
+/*raceStyles*/
+img {
+  margin: 0;
+  padding: 0;
+}
+
+/*styles for Enter Page*/
+.indx {
+  background-image: url("images/home.jpg");
+  background-size: 100%;
+  width: 100%;
+}
+.enterBox {
+  width: 100%;
+}
+.enter {
+  width: 20%;
+  margin: 40% 0% 0% 40%;
+}
+
+/*styles for Doomsday Drags*/
+body {
+  background-image: url("images/hell-hole.jpg");
+  background-size: auto;
+  width: 3840px;
+}
+.box {
+  display: block;
+  width: 100%;
+}
+.nuked {
+  position: absolute;
+  top: 7em;
+  left: 107em;
+  border-radius: 8em;
+  border-left: ridge lime 1em;
+  border-right: ridge lime 1em;
+  border-top: ridge lime .3em;
+  border-bottom: ridge lime .3em;
+}
+.greasy {
+  position: absolute;
+  top: 44em;
+}
+.scooter {
+  position: absolute;
+  top: 54.5em;
+}
+.skull {
+  position: absolute;
+  top: 25em;
+}
+.win {
+  position: absolute;
+  top: 40em;
+  left: 187em;
+}
+.scorebox {
+  position: absolute;
+  left: 78.5em;
+}
+
+/*scooter score icons*/
+#s0 {
+  position: absolute;
+  top: 21.5em;
+  left: 100em;
+}
+#s1 {
+  position: absolute;
+  top: 21.2em;
+  left: 97em;
+}
+#s2 {
+  position: absolute;
+  top: 21.5em;
+  left: 94em;
+}
+#s3 {
+  position: absolute;
+  top: 21.2em;
+  left: 91em;
+}
+#s4 {
+  position: absolute;
+  top: 21.4em;
+  left: 88em;
+}
+#s5 {
+  position: absolute;
+  top: 17em;
+  left: 98em;
+}
+#s6 {
+  position: absolute;
+  top: 17.3em;
+  left: 95em;
+}
+#s7 {
+  position: absolute;
+  top: 17em;
+  left: 92em;
+}
+#s8 {
+  position: absolute;
+  top: 17.3em;
+  left: 89em;
+}
+#s9 {
+  position: absolute;
+  top: 12.5em;
+  left: 97em;
+}
+#s10 {
+  position: absolute;
+  top: 12.8em;
+  left: 94em;
+}
+#s11 {
+  position: absolute;
+  top: 12.5em;
+  left: 91em;
+}
+#s12 {
+  position: absolute;
+  top: 6.3em;
+  left: 93em;
+}
+
+/*greasy score icons*/
+#g0 {
+  position: absolute;
+  top: 21.5em;
+  left: 141.5em;
+}
+#g1 {
+  position: absolute;
+  top: 21.2em;
+  left: 144.5em;
+}
+#g2 {
+  position: absolute;
+  top: 21.5em;
+  left: 147.5em;
+}
+#g3 {
+  position: absolute;
+  top: 21.2em;
+  left: 150.5em;
+}
+#g4 {
+  position: absolute;
+  top: 21.5em;
+  left: 153.5em;
+}
+#g5 {
+  position: absolute;
+  top: 17em;
+  left: 143em;
+}
+#g6 {
+  position: absolute;
+  top: 17.3em;
+  left: 146em;
+}
+#g7 {
+  position: absolute;
+  top: 17em;
+  left: 149em;
+}
+#g8 {
+  position: absolute;
+  top: 17.3em;
+  left: 152em;
+}
+#g9 {
+  position: absolute;
+  top: 12.5em;
+  left: 144.5em;
+}
+#g10 {
+  position: absolute;
+  top: 12.8em;
+  left: 147.5em;
+}
+#g11 {
+  position: absolute;
+  top: 12.5em;
+  left: 150.5em;
+}
+#g12 {
+  position: absolute;
+  top: 6.3em;
+  left: 146em;
+}
