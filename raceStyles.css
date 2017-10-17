@@ -50,14 +50,23 @@ body {
   position: absolute;
   top: 25em;
 }
+#skully:hover {
+  cursor: url("images/handy.png"), pointer;
+}
 #winner {
   position: absolute;
   top: 40em;
   left: 187em;
 }
+#winner:hover {
+  cursor: url("images/handy.png"), pointer;
+}
 #score {
   position: absolute;
   left: 78.5em;
+}
+#score:hover {
+  cursor: url("images/handy.png"), pointer;
 }
 
 /*scooter score icons*/

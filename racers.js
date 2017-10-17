@@ -13,8 +13,8 @@ var grafix = ["images/skully.gif", "images/goSkully.gif", "images/scooter.gif",
 var greasyScore = [];
 var scooterScore = [];
 
-//audio array
-var noises = ["audio/idle.mp3", "audio/go.mp3", "audio/bgtunes.mp3"];
+//audio arrays
+var noises = ["audio/idled.mp3", "audio/go.mp3", "audio/bgtunes.mp3"];
 
 //global vars
 var sWins = 0;//win count for scooter
@@ -31,7 +31,7 @@ window.addEventListener("load", go, false);
 // background music
 $("#racket")[0].src = noises[2];
 $("#background")[0].loop = true;
-$("#background")[0].volume = .3;
+$("#background")[0].volume = .25;
 $("#background")[0].load();
 $("#background")[0].play();
 
