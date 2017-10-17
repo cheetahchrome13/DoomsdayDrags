@@ -28,16 +28,18 @@ var heat = 0;//race count
 //calls go() on load
 window.addEventListener("load", go, false);
 
-// background music
-$("#racket")[0].src = noises[2];
-$("#background")[0].loop = true;
-$("#background")[0].volume = .25;
-$("#background")[0].load();
-$("#background")[0].play();
+// // background music
+// $("#racket")[0].src = noises[2];
+// $("#background")[0].loop = true;
+// $("#background")[0].volume = .25;
+// $("#background")[0].load();
+// $("#background")[0].play();
 
 //clears cache after 13 heats
 function reset() {
-    location.reload();
+    // location.reload();
+// maybe use a window.focus here on index.html to pass data for a scoreboard?
+    self.close();
 }
 
 //shows scoreboard

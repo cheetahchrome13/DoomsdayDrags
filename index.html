@@ -10,9 +10,29 @@
   <script src="jquery-3.2.1.min.js"></script>
 </head>
 <body class="indx">
+
+  <!--background music loop  -->
+  <audio id="background" preload="auto">
+    <source src="" type="audio/mpeg" id="racket">
+  </audio>
+
   <div class="enterBox">
-    <a href="drags.html"><img src="images/enter.png" alt="" class="enter"></a>
+    <img src="images/enter.png" alt="" class="enter">
   </div>
+  <script>
+  <!-- // background music loop
+    $("#racket")[0].src = "audio/bgtunes.mp3";
+    $("#background")[0].loop = true;
+    $("#background")[0].volume = .25;
+    $("#background")[0].load();
+    $("#background")[0].play();
+    $(".enter")[0].addEventListener("click", enter, false);
+    // var gatekeeper;
+    function enter(){
+      window.open("drags.html")
+    }
+  </script> -->
+
   <!-- <script
       src="http://code.jquery.com/jquery-3.2.1.min.js"
       integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
