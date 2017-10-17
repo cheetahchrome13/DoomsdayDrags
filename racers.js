@@ -13,18 +13,27 @@ var grafix = ["images/skully.gif", "images/goSkully.gif", "images/scooter.gif",
 var greasyScore = [];
 var scooterScore = [];
 
+//audio array
+var noises = ["audio/idle.mp3", "audio/go.mp3", "audio/bgtunes.mp3"];
+
 //global vars
 var sWins = 0;//win count for scooter
 var gWins = 0;//win count for greasy
 var heat = 0;//race count
 
-//troubleshooters
-console.log ("heat is: " + heat);
-console.log ("sWins is: " + sWins);
-console.log ("gWins is: " + gWins);
+// console.log ("heat is: " + heat);
+// console.log ("sWins is: " + sWins);//troubleshooters
+// console.log ("gWins is: " + gWins);
 
 //calls go() on load
 window.addEventListener("load", go, false);
+
+// background music
+$("#racket")[0].src = noises[2];
+$("#background")[0].loop = true;
+$("#background")[0].volume = .3;
+$("#background")[0].load();
+$("#background")[0].play();
 
 //clears cache after 13 heats
 function reset() {
@@ -45,9 +54,9 @@ function showScore(){
   }
   $("#score")[0].scrollIntoView({behavior: "smooth",});
 
-  console.log ("heat is: " + heat);
-  console.log ("sWins is: " + sWins);//troubleshooters
-  console.log ("gWins is: " + gWins);
+  // console.log ("heat is: " + heat);
+  // console.log ("sWins is: " + sWins);//troubleshooters
+  // console.log ("gWins is: " + gWins);
 
   if (heat < 13){
     $("#score")[0].addEventListener("click", go, false);
@@ -66,12 +75,17 @@ function go() {
     $("#g" + i)[0].style.display = "none";
   }
   $("#winner, #nuke, #score").css("display", "none");
-  $("#skully, #scooter, #greasy").css("display","block");//note
-  $("#greasy, #scooter").css("left", "0em");
   $("#skully")[0].src = grafix[0];
   $("#scooter")[0].src = grafix[2];
   $("#greasy")[0].src = grafix[5];
+  $("#skully, #scooter, #greasy").css("display","block");//note
+  $("#greasy, #scooter").css("left", "0em");
   $("#scooter")[0].scrollIntoView({behavior: "smooth"});
+  $("#noise")[0].src = noises[0];
+  $("#effects")[0].loop = true;
+  $("#effects")[0].volume = .5;
+  $("#effects")[0].load();
+  $("#effects")[0].play();
   $('#skully')[0].addEventListener("click", timer, false);
 }
 
@@ -82,6 +96,12 @@ function timer() {
   $("#skully")[0].src = grafix[1];
   $("#scooter")[0].src = grafix[3];
   $("#greasy")[0].src = grafix[6];
+  $("#effects")[0].pause();
+  $("#noise")[0].src = noises[1];
+  $("#effects")[0].loop = false;
+  $("#effects")[0].volume = .6;
+  $("#effects")[0].load();
+  $("#effects")[0].play();
 }
 
 //Race moves the monsters
@@ -103,10 +123,12 @@ function race() {
   }
   if (scoot >= 225) {
     clearInterval(startTimer);
+    $("#effects")[0].pause();
     scooterWins();
   }
   else if (grease >= 225) {
     clearInterval(startTimer);
+    $("#effects")[0].pause();
     greasyWins();
   }
 }
@@ -124,8 +146,8 @@ function scooterWins() {
     greasyScore[heat - 1] = gWins > sWins ? grafix[12] : grafix[11];
   }
 
-  console.log ("scooterScore is:" + scooterScore);//troubleshooters
-  console.log ("greasyScore is:" + greasyScore);
+  // console.log ("scooterScore is:" + scooterScore);//troubleshooters
+  // console.log ("greasyScore is:" + greasyScore);
 
   $("#scooter, #greasy, #skully").css("display", "none");
   $("#winner")[0].src = grafix[4];
@@ -147,8 +169,8 @@ function greasyWins() {
     greasyScore[heat - 1] = gWins > sWins ? grafix[12] : grafix[11];
   }
 
-  console.log ("scooterScore is:" + scooterScore);//troubleshooters
-  console.log ("greasyScore is:" + greasyScore);
+  // console.log ("scooterScore is:" + scooterScore);//troubleshooters
+  // console.log ("greasyScore is:" + greasyScore);
 
   $("#scooter, #greasy, #skully").css("display", "none");
   $("#winner")[0].src = grafix[7];
