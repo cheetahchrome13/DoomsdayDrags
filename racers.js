@@ -20,6 +20,7 @@ var noises = ["audio/idled.mp3", "audio/go.mp3", "audio/bgtunes.mp3"];
 var sWins = 0;//win count for scooter
 var gWins = 0;//win count for greasy
 var heat = 0;//race count
+var greasyWon = "";//used to keep score on index page
 
 // console.log ("heat is: " + heat);
 // console.log ("sWins is: " + sWins);//troubleshooters
@@ -36,11 +37,15 @@ window.addEventListener("load", go, false);
 // $("#background")[0].play();
 
 //clears cache after 13 heats
-function reset() {
+function goHome() {
     // location.reload();
 // need to pass a boolean(greasyWon?) to index.html using the window.opener
 // method here before the page closes for scorekeeping
-    self.close();
+  if (window.opener != null && !window.opener.closed) {
+    var tic = window.opener.document.getElementById("score");
+    tic.value = greasyWon;
+  }
+  self.close();
 }
 
 //shows scoreboard
@@ -60,12 +65,13 @@ function showScore(){
   // console.log ("heat is: " + heat);
   // console.log ("sWins is: " + sWins);//troubleshooters
   // console.log ("gWins is: " + gWins);
+  console.log ("greasyWon is:" + greasyWon);
 
   if (heat < 13){
     $("#score")[0].addEventListener("click", go, false);
   }
   if (heat === 13) {
-    $("#score")[0].addEventListener("click", reset, false);
+    $("#score")[0].addEventListener("click", goHome, false);
   }
 }
 
@@ -147,6 +153,7 @@ function scooterWins() {
   if (heat === 13) {
     scooterScore[heat - 1] = sWins > gWins ? grafix[12] : grafix[11];
     greasyScore[heat - 1] = gWins > sWins ? grafix[12] : grafix[11];
+    greasyWon = gWins > sWins ? "greezy" : "scootr";//might be redundant***
   }
 
   // console.log ("scooterScore is:" + scooterScore);//troubleshooters
@@ -170,6 +177,7 @@ function greasyWins() {
   if (heat === 13){
     scooterScore[heat - 1] = sWins > gWins ? grafix[12] : grafix[11];
     greasyScore[heat - 1] = gWins > sWins ? grafix[12] : grafix[11];
+    greasyWon = gWins > sWins ? "greezy" : "scootr";//might be redundant***
   }
 
   // console.log ("scooterScore is:" + scooterScore);//troubleshooters
