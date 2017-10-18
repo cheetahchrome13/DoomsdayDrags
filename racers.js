@@ -28,7 +28,7 @@ var heat = 0;//race count
 //calls go() on load
 window.addEventListener("load", go, false);
 
-// // background music
+// // background music moved to index.html
 // $("#racket")[0].src = noises[2];
 // $("#background")[0].loop = true;
 // $("#background")[0].volume = .25;
@@ -38,7 +38,8 @@ window.addEventListener("load", go, false);
 //clears cache after 13 heats
 function reset() {
     // location.reload();
-// maybe use a window.focus here on index.html to pass data for a scoreboard?
+// need to pass a boolean(greasyWon?) to index.html using the window.opener
+// method here before the page closes for scorekeeping
     self.close();
 }
 
